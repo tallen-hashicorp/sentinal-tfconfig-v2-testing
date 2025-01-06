@@ -3,5 +3,8 @@ Testing [tfconfig-v2](https://developer.hashicorp.com/sentinel/docs/features/ter
 
 ## To Run
 ```bash
+terraform init
+terraform plan -out=tfplan.binary
+terraform show -json tfplan.binary > plan.json
 sentinel apply -config=sentinel.hcl policy.sentinel
 ```
