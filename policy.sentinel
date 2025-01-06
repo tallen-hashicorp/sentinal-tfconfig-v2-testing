@@ -1,9 +1,9 @@
 # policy.sentinel
-import "tfconfig/v2" as tfconfig
+import "tfplan"
 
 # Ensure all S3 buckets are private
 all_buckets_private = rule {
-  all tfconfig.resources.aws_s3_bucket as _, bucket {
+  all tfplan.resources.aws_s3_bucket as _, bucket {
     bucket.config.acl is "private"
   }
 }
