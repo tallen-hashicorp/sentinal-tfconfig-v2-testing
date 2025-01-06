@@ -1,0 +1,23 @@
+{
+    "test": {
+      "main": {
+        "pass": true
+      }
+    },
+    "mock": {
+      "tfconfig/v2": {
+        "resources": {
+          "aws_s3_bucket": {
+            "example": {
+              "type": "aws_s3_bucket",
+              "config": {
+                "acl": "private",
+                "bucket": "example-bucket-name"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
